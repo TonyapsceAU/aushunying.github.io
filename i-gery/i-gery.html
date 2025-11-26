@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-gery 高背椅電動輔助工具及管理系統</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.75;
+        }
+        header {
+            background: #4A7AFE;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.4rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            border-left: 4px solid #4A7AFE;
+            padding-left: 12px;
+            margin-top: 50px;
+            font-size: 1.6rem;
+        }
+
+        img {border-radius: 8px; margin: 20px 0; }
+
+        .highlight {
+            background: #eef3ff;
+            padding: 15px 20px;
+            border-left: 4px solid #4A7AFE;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .bg {
+    background-image: url('Picture5.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(12px);
+    z-index: -1;
+}
+
+    </style>
+</head>
+
+<body>
+<div class="bg"></div>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+    <div style="width: 150px; visibility: hidden; flex-shrink: 0;"></div>
+    
+    <div style="text-align: center; flex-grow: 1;">
+        <h1>i-gery</h1>
+        <p>高背椅電動輔助工具及管理系統</p>
+    </div>
+    
+    <div style="width: 200px; flex-shrink: 0;">
+        <img src="Picture21.png" width="200"/>
+    </div>
+</header>
+
+<div class="container">
+
+    <h2>1. 服務對象與方案簡介</h2>
+    <p>
+        i-gery 是一套為香港老人院設計的 <strong>高背椅電動輔助工具與管理系統</strong>，
+        目標使用者包括：
+    </p>
+    <ul>
+        <li>護理人員：降低搬運高背椅造成的體力負擔</li>
+        <li>老友記（長者）：提升移動安全與生活品質</li>
+    </ul>
+    <p>
+        系統以自動化運輸與數據管理為核心，使護理員能更輕鬆地將高背椅
+        推至不同地點，同時減少意外發生機會並提高工作效率。
+    </p>
+
+    <h2>2. 方案背景</h2>
+    <p>
+        香港人口快速老化，<strong>每三名市民就有一位是長者</strong>。  
+        「以老護老」的現象普遍，使護理員的工作壓力與身體負荷極高。
+    </p>
+    <p>
+        高背椅重量可達 <strong>26–52 公斤</strong>，每天大量推動造成：
+    </p>
+    <ul>
+        <li>護理員長期勞損</li>
+        <li>高背椅移動不穩導致長者跌倒</li>
+        <li>缺乏追蹤系統造成管理盲點</li>
+    </ul>
+
+    <h2>3. 方案目的</h2>
+    <p>
+        i-gery 的目標是：
+    </p>
+    <ul>
+        <li>減少護理員勞損與受傷機率</li>
+        <li>提升護理院舍移動高背椅的效率與安全性</li>
+        <li>透過 QR Code 與管理系統追蹤老友記活動資訊</li>
+        <li>協助院舍進行更有效的日常管理與活動安排</li>
+    </ul>
+
+    <h2>4. 靈感來源</h2>
+    <p>
+        系統設計結合以下2項靈感來源：
+    </p>
+    <img src="Picture1.png" width="200"/>
+    <img src="Picture2.png" width="200"/>
+    <img src="Picture3.png" width="200"/>
+    <ul>
+        <li>圖1及圖2為一架唧車 我們希望能運用唧車提升重物的方案，使我們在自制唧車時能跟據此方案作運輸用。</li>
+        <li>圖3為我們採用的管理系統，希望能利用WiFi及電話中的掃瞄器掃瞄QR Code即時上傳老友記的位置資訊到我們的系統中，減少風險。</li>
+    </ul>
+
+    <h2>5. 概念設計</h2>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <div>
+            <img src="Picture4.png" width="200" alt="Picture4"/>
+        </div>
+        <ol>
+            <li><strong>識別標籤貼紙：</strong>貼於高背椅，無需改裝椅子</li>
+            <li><strong>電動推杆升降裝置：</strong>承重整架高背椅，至車輪零空  , 使重心壓在電機上</li>
+            <li><strong>12V 輪轂電機：</strong>提供推動力，可前後左右行走</li>
+            <li><strong>控制器：</strong>控制升降、方向與速度</li>
+            <li><strong>手機應用程式：</strong>掃描 QR Code，上傳位置與數據</li>
+            <li><strong>伺服器後台：</strong>集中管理、查閱紀錄</li>
+        </ol>
+    </div>
+
+    
+    
+
+    <h2>6. 實體影像</h2>
+    <img src="Picture5.png" width="200"/>
+    <img src="Picture6.png" width="200"/>
+    <img src="Picture7.png" width="200"/>
+    <img src="Picture8.png" width="200"/>
+    <img src="Picture9.png" width="200"/>
+    <div>
+        <img src="group1.jpg" alt="Group Photo 1" width="48%" style="border-radius:12px; margin:6px;">
+        <img src="group2.jpg" alt="Group Photo 2" width="48%" style="border-radius:12px; margin:6px;">
+    </div>
+
+    <h2>6.1 獲獎紀錄 Awards</h2>
+
+    <div>
+        <p><strong>第21屆 香港青少年科技創新大賽</strong><br>
+           高中組研究及發明（數理及工程）優異獎</p>
+        <img src="香港青少年科技創新大賽.jpg" width="220" style="margin:8px;">
+
+        <p><strong>2019 彈想頭社創科技比賽 — 冠軍</strong></p>
+        <img src="彈想頭社創科技比賽冠軍.png" width="220" style="margin:8px;">
+
+        <p><strong>2018 樂齡科技顯愛心 — 高中組金獎</strong></p>
+        <img src="樂齡科技金獎.png" width="200" style="margin:8px;">
+        <img src="樂齡科技顯愛2018高中組金獎.png" width="200" style="margin:8px;">
+
+        <p><strong>2018 我是發明家大獎 — 季軍</strong></p>
+        <img src="2018我是發明家大獎季軍.png" width="220" style="margin:8px;">
+    </div>
+
+    <h2>7. 技術原創性</h2>
+
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <div>
+            <img src="Picture10.png" width="200"/>
+        </div>
+        <ul>
+            <li>價格較貴(售價高達 HK$13,000)和普遍性也不高</li>
+            <li>我們設計一個成本較低、也安全的高背椅電動輔助工具、及其管理系統。</li>
+            <li>運用輪轂電機作動力，透過arduino 板及電機驅動板驅動，另外我們將會利用APP INVENTOR 編寫相關手機應用程式，並架設一個 PHP MYSQL 平台作為數據庫，以傳送不同的資料。</li>
+        </ul>
+    </div>
+
+
+    <h2>8. 操控流程</h2>
+    <p>輔助裝置操控流程</p>
+        <li>將裝置推至高背椅後方</li>
+        <li>啟動升降開關，使後輪騰空</li>
+        <li>啟動移動開關</li>
+        <li>用操控桿控制方向（前後左轉右轉）</li>
+        <li>到達位置後放低椅子並關閉系統</li>
+    <p>app操控流程</p>
+    <div style="display: flex; align-items: flex-start; gap: 30%;">
+        <ul>
+            <p>記錄資料</p>
+            <img src="record.gif" width="200"/> 
+
+        </ul>
+        <ul>
+            <p>觀看記錄</p>  
+            <img src="history.gif" width="200"/>
+        </ul>
+    </div>
+    <p>Code</p>
+    <img src="Picture12.png" width="400"/>
+    <img src="Picture13.png" width="400"/>
+    <img src="Picture14.png" width="400"/>
+    <img src="Picture15.png" width="400"/>
+    <img src="Picture16.png" width="400"/>
+    <img src="Picture17.png" width="400"/>
+    <img src="Picture18.png" width="400"/>
+
+
+    <h2>9. 電路與機械系統</h2>
+    <div style="display: flex; align-items: flex-start; gap: 40px;">
+    <div>
+    <p>
+        系統由三部分組成：
+    </p>
+    <ul>
+        <li><strong>Arduino Uno：</strong>處理控制訊號</li>
+        <li><strong>JYQD 馬達控制板：</strong>驅動輪轂電機</li>
+        <li><strong>電動推杆：</strong>承托 500kg，穩定支撐</li>
+    </ul>
+    </div>
+    <img src="Picture20.png" width="400"/>
+    </div>
+
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <img src="Picture19.png" width="400"/>
+        <pre>void setup() {
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+ 
+  digitalWrite(5, LOW);   // LOW 代表正转, HIGH 代表逆转
+  analogWrite(6, 0);     // 没有剎车讯号
+  analogWrite(3, 0);     // 0 代表车速为 0 ， 127 代表最高速
+}
+ 
+void loop() {
+analogWrite(3, 50);     // 0 代表车速为 0 ， 127 代表最高速，50 是中速
+  delay(5000);
+  analogWrite(6,70);      //以 70/127 的力度剎车
+  digitalWrite(5, HIGH);   // LOW 代表正转, HIGH 代表逆转
+analogWrite(6,0);       松开剎车，继续用车
+ …
+..
+}
+        </pre>
+   </div>
+
+
+    <h2>10. 製作成本</h2>
+    <p>整體成本：<strong>約 HK$1650</strong></p>
+
+    <h2>11. 預期社會影響</h2>
+    <div class="highlight">
+        <p>
+            i-gery 能有效改善護理員工作環境，提升安全性並吸引更多年輕人加入護理行業。
+            不僅能在老人院使用，也可應用於醫院或需搬運重物的場所。
+        </p>
+    </div>
+
+    <h2>12. 總結</h2>
+    <p>
+        此專案從問題研究、原型製作到系統建立皆已完成。我們將持續與老人院職員合作試用，
+        希望能實際改善長者生活、提升護理品質，並創造更安全的工作環境。
+    </p>
+
+    <h2>13. References</h2>
+    <ul>
+	
+        香港的人口老化問題有多嚴重?
+        <li><a href="http://www.polyu.edu.hk/cpa/Excel@PolyU/2011/11/viewpoint_c.html" target="_blank">
+            (1) PolyU Viewpoint Article
+        </a></li>
+	安老服務業陷「以老護老」危機
+        <li><a href="http://paper.wenweipo.com/2013/06/14/FK1306140003.htm" target="_blank">
+            (2) Wen Wei Po Report
+        </a></li>
+
+    </ul>
+
+</div>
+
+</body>
+</html>
