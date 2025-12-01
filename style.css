@@ -2,16 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    background: #f9f9fb;
+    background: #f9f9fb; /* 頁面基礎背景色 */
     color: #111;
     line-height: 1.6;
 }
 
+/* --- 1. HEADER 區塊 (白色背景) --- */
 header {
     text-align: center;
     padding: 60px 20px 40px;
     background: white;
-    border-bottom: 1px solid #e4e4e4;
+    /* 強化底部分隔線，使用主題色 */
+    border-bottom: 3px solid #4f8ef7; 
 }
 
 h1 {
@@ -31,20 +33,133 @@ h1 {
     font-weight: 500;
 }
 
+/* --- 2. SECTION 結構與 H2 樣式優化 --- */
+
+/* 移除 section 自身的邊距，讓背景色可以鋪滿全寬 */
 section {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 設定所有區塊的內部內容居中並限制寬度 */
+section > * {
     max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
+/* 強化 H2 標題，使其成為區塊的錨點 */
 h2 {
-    margin-bottom: 16px;
-    font-size: 1.8rem;
+    /* 增加左側的裝飾性邊界作為區塊分隔標誌 */
+    border-left: 5px solid #4f8ef7; 
+    padding-left: 15px;
+    font-size: 2.2rem; /* 標題略為放大 */
+    color: #333; 
+    margin-bottom: 25px; 
+    margin-top: 20px;
 }
 
+/* --- 3. 背景色交替設定 --- */
+
+/* SUMMARY 區塊：白色背景 */
+.summary {
+    background-color: white; 
+    padding: 40px 0; /* 使用垂直 padding 創造間距 */
+    border-bottom: 2px solid #e2e2e2; /* 增加一個柔和的底部線 */
+}
+
+/* SKILLS 區塊：淺灰色背景 */
+.skills {
+    background-color: #f0f0f4; 
+    padding: 40px 0; 
+}
+
+/* PROJECTS 區塊：白色背景 */
 .projects {
+    background-color: white; 
+    padding: 40px 0;
     display: grid;
     gap: 24px;
+}
+
+/* CONTACT 區塊：淺灰色背景 */
+.contact {
+    background-color: #f0f0f4; 
+    padding: 40px 0;
+}
+
+
+/* --- 4. SKILLS 技能區塊優化 --- */
+.skills h3 {
+    font-size: 1.35rem;
+    color: #333;
+    margin-top: 40px; 
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #c0c0c0; 
+}
+
+.level-key {
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    color: #666; 
+}
+
+.skill-list {
+    list-style: none; 
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.skill-list li {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skill-name {
+    /* 調整為 25%，給技能條更多空間 */
+    flex: 0 0 25%; 
+    font-weight: 600; 
+    padding-right: 10px;
+    color: #444;
+}
+
+.skill-bar-container {
+    flex: 1; 
+    height: 12px;
+    background-color: #e9ecef; 
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: #4f8ef7; 
+    border-radius: 6px;
+    transition: width 1s ease-in-out;  
+}
+
+/* --- 5. PROJECTS 專案卡片優化 --- */
+
+/* 專案區塊中的文字：MY LATEST WORK */
+.projects > p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    font-size: 0.9em;
+    color: #4f8ef7;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: -15px; 
 }
 
 .project-card {
@@ -52,6 +167,13 @@ h2 {
     background: white;
     border-radius: 10px;
     border: 1px solid #e2e2e2;
+    /* 新增：柔和的 box-shadow 讓卡片看起來浮起 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.project-card:hover {
+    transform: translateY(-3px); 
 }
 
 .project-card h3 {
@@ -62,8 +184,10 @@ h2 {
     color: #4f8ef7;
     font-size: 0.9rem;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
+/* --- 6. 按鈕樣式 --- */
 .btn {
     display: inline-block;
     margin-top: 10px;
@@ -73,12 +197,26 @@ h2 {
     color: white;
     text-decoration: none;
     font-size: 0.85rem;
+    transition: background-color 0.3s;
 }
 
-.skills ul {
+.btn:hover {
+    background: #3a75e0; 
+}
+
+/* 讓所有區塊的內部內容居中對齊並限制寬度 */
+section > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 20px;
+    padding-right: 20px;
+    
+    /* ⭐️ 關鍵修改：讓行內元素（如按鈕）在內容容器內靠左對齊 ⭐️ */
+    text-align: left; 
 }
 
+/* --- 7. 頁腳 --- */
 footer {
     text-align: center;
     padding: 20px;
