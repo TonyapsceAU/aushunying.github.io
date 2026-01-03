@@ -143,49 +143,52 @@ h2 {
     transition: width 1s ease-in-out;  
 }
 
-/* --- 5. PROJECTS 專案卡片優化 --- */
+/* --- 5. PROJECTS 專案區塊優化 --- */
 
-/* 專案區塊中的文字：MY LATEST WORK */
-.projects > p {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    font-size: 0.9em;
-    color: #4f8ef7;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-top: -15px; 
+.projects {
+    background-color: white; 
+    padding: 40px 0;
+}
+
+/* 確保專案卡片的容器是垂直堆疊 */
+.projects > div:not(.latest-label):not(h2) {
+    display: flex;
+    flex-direction: column; /* 強制單列排列 */
+    gap: 30px;              /* 卡片之間的間距 */
+    width: 100%;
+    max-width: 900px;       /* 限制最大寬度，避免在寬螢幕上過扁 */
+    margin: 0 auto;
 }
 
 .project-card {
-    padding: 24px;
+    padding: 30px;          /* 增加內距讓空間感更好 */
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #e2e2e2;
-    /* 新增：柔和的 box-shadow 讓卡片看起來浮起 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-    transition: transform 0.3s ease-in-out; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* 確保寬度填滿父容器 */
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .project-card:hover {
-    transform: translateY(-3px); 
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
     margin-top: 0;
+    font-size: 1.5rem;
+    color: #111;
 }
 
-.project-card .tech {
-    color: #4f8ef7;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    font-weight: 500;
+/* 讓描述文字與按鈕之間有足夠間距 */
+.project-card p:last-of-type {
+    margin-bottom: 20px;
 }
+
 
 /* --- 6. 按鈕樣式 --- */
 .btn {

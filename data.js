@@ -70,7 +70,7 @@ const siteData = {
                 link: "./cfmas/cfmas.html"
             },
             {
-                title: "i-gery (Assistive Mobility System)",
+                title: "i-gery (geriatric chair assistive movement system)",
                 tech: "HTML • SQL • C++ • Electronics • Mechanics",
                 desc: "An electric assistive mobility platform and QR-based management system designed to help caregivers safely transport high-back geriatric chairs in elderly homes.",
                 link: "./i-gery/i-gery.html"
@@ -242,9 +242,8 @@ function initPage(lang) {
     });
 
     // 3. 更新作品集
-    const projectsContainer = document.querySelector('.projects');
-    const oldCards = projectsContainer.querySelectorAll('.project-card');
-    oldCards.forEach(card => card.remove());
+    const gridContainer = document.getElementById('projects-grid'); // 改抓新的容器
+    gridContainer.innerHTML = ''; // 清空舊內容
 
     d.projects.forEach(p => {
         const card = document.createElement('div');
@@ -253,8 +252,8 @@ function initPage(lang) {
             <h3>${p.title}</h3>
             <p class="tech">${p.tech}</p>
             <p>${p.desc}</p>
-            <a href="${p.link}" class="btn">${lang === 'zh' ? '查看專案' : 'View Project'}</a>
+            <a href="${p.link}" class="btn" target="_blank">${lang === 'zh' ? '查看專案' : 'View Project'}</a>
         `;
-        projectsContainer.appendChild(card);
+        gridContainer.appendChild(card);
     });
 }
