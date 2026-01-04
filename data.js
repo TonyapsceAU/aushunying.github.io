@@ -110,15 +110,15 @@ const siteData = {
                 name: "程式開發",
                 list: [
                     { name: "Python", level: 4, percent: "80%" },
-                    { name: "JavaScript (Fetch API)", level: 3, percent: "80%" },
-                    { name: "C/C++", level: 2, percent: "60%" },
-                    { name: "HTML/CSS", level: 4, percent: "60%" },
-                    { name: "Android Studio", level: 2, percent: "80%" },
-                    { name: "MySQL / H2 Database / Firebase", level: 2, percent: "80%" },
+                    { name: "JavaScript (Fetch API)", level: 3, percent: "60%" },
+                    { name: "C/C++", level: 2, percent: "40%" },
+                    { name: "HTML/CSS", level: 4, percent: "80%" },
+                    { name: "Android Studio", level: 2, percent: "40%" },
+                    { name: "MySQL / H2 Database / Firebase", level: 2, percent: "40%" },
                     { name: "Git / GitHub", level: 4, percent: "80%" },
                     { name: "Java / Spring Boot 3", level: 3, percent: "60%" },
-                    { name: "RESTful API / JPA", level: 1, percent: "60%" },
-                    { name: "JPA / Hibernate", level: 1, percent: "80%" }
+                    { name: "RESTful API / JPA", level: 1, percent: "20%" },
+                    { name: "JPA / Hibernate", level: 1, percent: "20%" }
                 ]
             },
             {
